@@ -53,5 +53,14 @@ func main() {
 	// append函数会改变slice所引用的数组的内容，从而影响到引用同一数组的其它slice。
 	// 但当slice中没有剩余空间（即(cap-len) == 0）时，此时将动态分配新的数组空间。
 	// 返回的slice数组指针将指向这个空间，而原 数组的内容将保持不变；其它引用此数组的slice则不受影响
+	app_arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7}
+	app_s1 := app_arr[2:6]
+	app_s2 := app_s1[3:5]
+
+	app_s3 := append(app_s2, 10)
+	app_s4 := append(app_s3, 11)
+	app_s5 := append(app_s4, 12)
+	fmt.Println(app_s3, app_s4, app_s5)
+	fmt.Println(app_arr)
 
 }
