@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func variable()  {
+func variable() {
 	// 三种自定义变量形式
 	var a = "s"
 	fmt.Println(a)
@@ -11,7 +11,7 @@ func variable()  {
 	var c int = 2
 	fmt.Println(c)
 	// 多变量声明
-	d, e, f := 1,2,3
+	d, e, f := 1, 2, 3
 	fmt.Println(d, e, f)
 	//批量自定义
 	var (

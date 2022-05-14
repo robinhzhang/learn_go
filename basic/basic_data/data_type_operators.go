@@ -1,6 +1,6 @@
 package main
 
-func data_type()  {
+func data_type() {
 	// 变量需要手动转换类型
 	//复合类型
 	// 指针类型 接口类型 Channel类型 函数类型
@@ -8,6 +8,6 @@ func data_type()  {
 
 }
 
-func operators()  {
+func operators() {
 	// 跟其他语言差不多没什么可以注意的，遇到再说
 }
