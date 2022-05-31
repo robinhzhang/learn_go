@@ -1,6 +1,7 @@
 package infra
 
 import (
+	"fmt"
 	"io/ioutil"
 	"net/http"
 )
@@ -12,7 +13,7 @@ func (Retriever) Get(url string) string {
 	resp, err := http.Get(url)
 
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 	defer resp.Body.Close()
 
