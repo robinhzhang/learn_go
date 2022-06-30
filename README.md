@@ -40,3 +40,14 @@ go 是使用者来定义接口
 2.1.4
 /213interface_duck/real/Retriever.go
 /213interface_duck/main.go
+
+2.1.5接口的组合
+使用者可以根据需求组合需要的接口
+实现者不用管这些 只管实现就行了
+
+2.1.6 重要的系统接口
+
+Stringer
+底层的文件操作
+reader
+writer
