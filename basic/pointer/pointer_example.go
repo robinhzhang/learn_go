@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//值传递 每用
+//值传递 没用
 //func swap(a, b  int ){
 //	b,a =a,b
 //}

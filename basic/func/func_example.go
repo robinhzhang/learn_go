@@ -22,7 +22,7 @@ func f1(a, b int) (c, d int) {
 }
 
 //函数式编程，函数里面可以有函数
-func apply(op func(int, int) int, a, b int) int {
+func apply1(op func(int, int) int, a, b int) int {
 	p := reflect.ValueOf(op).Pointer()
 	opName := runtime.FuncForPC(p).Name()
 	fmt.Println(opName, a, b)
@@ -34,7 +34,7 @@ func pow(a, b int) int {
 }
 
 //可变参数
-func sum(numbers ...int) int {
+func sum1(numbers ...int) int {
 	s := 0
 	for i := 0; i < len(numbers); i++ {
 		s += numbers[i]
@@ -52,11 +52,11 @@ func main() {
 	}
 	fmt.Println(num)
 
-	fmt.Println(apply(pow, 22, 2))
+	fmt.Println(apply1(pow, 22, 2))
 	// 匿名函数
 	fmt.Println(apply(func(a, b int) int {
 		return int(math.Pow(float64(a), float64(b)))
 	}, 2, 4))
 
-	fmt.Println(sum(1, 2, 3, 44, 23, 2))
+	fmt.Println(sum1(1, 2, 3, 44, 23, 2))
 }
